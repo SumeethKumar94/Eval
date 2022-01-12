@@ -47,10 +47,10 @@ class Login {
         this.pass = _pass;
     }
 }
-__decorate([
+__/*decorate([
     Required
 ], Login.prototype, "title", void 0);
-//2 --create a html page --demovalidation
+//2 --create a html page --demovalidation*/
 //3--add addEvent Listener ('',event)=>method
 const form = document.getElementById('loginf');
 form.addEventListener('submit', (event) => {
@@ -62,15 +62,16 @@ form.addEventListener('submit', (event) => {
     var title = titleEl.value;
     var pass = passEl.value;
     //create an object of course
-    const courseObj = new Login(title, pass);
-    //validate() 
+    //const courseObj = new Login(title, pass);
+    //validate()
+     /*
     if (!validate(courseObj)) { //isValid == false
         alert("input value are Not valid");
         console.log(courseObj);
         return;
     }
     else
-    {
+    { */
         if (title == "Sumeeth" && pass == "1234") {
             alert("You have successfully logged in.");
             window.open("dashboard.html");
@@ -78,7 +79,7 @@ form.addEventListener('submit', (event) => {
             const loginErrorMsg = document.getElementById("p");
             loginErrorMsg.innerHTML="Username Password Incorrect";
         }
-    }
+
     
 });
 

@@ -1,7 +1,7 @@
 const loginForm = document.getElementById("loginf");
 const loginButton = document.getElementById("lsubmit");
 const loginErrorMsg = document.getElementById("p");
-document.getElementById("checkboxes").display="none";
+
 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
