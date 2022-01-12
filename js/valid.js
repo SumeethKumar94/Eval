@@ -55,7 +55,7 @@ __decorate([
 const form = document.querySelector('lform');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    //get all elements
+
     const titleEl = document.getElementById('uname');
     const passEl = document.getElementById('passw');
     //value from elements
