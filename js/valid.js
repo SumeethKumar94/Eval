@@ -47,7 +47,7 @@ class Login {
         this.pass = _pass;
     }
 }
-__/*decorate([
+/*decorate([
     Required
 ], Login.prototype, "title", void 0);
 //2 --create a html page --demovalidation*/
