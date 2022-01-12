@@ -20,10 +20,11 @@ console.log(username+" "+password);
 })
 
 var error=0;
+
 function fname()
 {
-     user=form.name.value;
-     var nameforma = /^[a-zA-Z\s]*$/;
+     user=form.name1.value;
+     var nameform = /^[a-zA-Z\s]*$/;
     if(user=="")
     {
         document.getElementById("fn").innerHTML="Enter  Full name";
@@ -31,7 +32,7 @@ function fname()
         error=1;
         
     }
-    else if(user.length <=3 || !user.match(nameforma))
+    else if(user.length <=3 || !user.match(nameform))
     {
         document.getElementById("fn").innerHTML="Its not a valid  Full name ";
         form.name.focus();
