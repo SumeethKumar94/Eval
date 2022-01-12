@@ -34,16 +34,14 @@ function validate(obj) {
                 case 'required':
                     isValid = isValid && !!obj[prop];
                     break;
-                case 'positive':
-                    isValid = obj[prop] > 0;
-                    break;
+                
             }
         }
     }
     return isValid;
 }
 //1-- creating class
-class Course {
+class Login {
     constructor(_title, _pass) {
         this.title = _title;
         this.pass = _pass;
@@ -51,7 +49,7 @@ class Course {
 }
 __decorate([
     Required
-], Course.prototype, "title", void 0);
+], Login.prototype, "title", void 0);
 //2 --create a html page --demovalidation
 //3--add addEvent Listener ('',event)=>method
 const form = document.querySelector('lform');
@@ -61,15 +59,26 @@ form.addEventListener('submit', (event) => {
     const titleEl = document.getElementById('uname');
     const passEl = document.getElementById('passw');
     //value from elements
-    const title = titleEl.value;
-    const pass = passEl.value;
+    var title = titleEl.value;
+    var pass = passEl.value;
     //create an object of course
-    const courseObj = new Course(title, pass);
+    const courseObj = new Login(title, pass);
     //validate() 
     if (!validate(courseObj)) { //isValid == false
         alert("input value are Not valid");
+        console.log(courseObj);
         return;
     }
-    console.log(courseObj);
+    else
+    {
+        if (title == "Sumeeth" && pass == "1234") {
+            alert("You have successfully logged in.");
+            window.open("dashboard.html");
+        } else {
+            const loginErrorMsg = document.getElementById("p");
+            loginErrorMsg.innerHTML="Username Password Incorrect";
+        }
+    }
+    
 });
 
