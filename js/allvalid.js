@@ -177,7 +177,7 @@ if(error==1)
 else
 {
     document.getElementById("err").innerHTML="";
-    alert("SucessFull Registerd");
+    alert("Sucessfully Registerd");
     window.open("dashboard.html");
     return true;
 
