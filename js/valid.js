@@ -52,7 +52,7 @@ __decorate([
 ], Login.prototype, "title", void 0);
 //2 --create a html page --demovalidation
 //3--add addEvent Listener ('',event)=>method
-const form = document.querySelector('lform');
+const form = document.getElementById('loginf');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
